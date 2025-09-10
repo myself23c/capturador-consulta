@@ -6364,7 +6364,8 @@
     "embarazada": "sinembarazo",
     "nutricion": "peso-normal",
     "eda": "no",
-    "caries": "nocaries"
+    "caries": "nocaries",
+    "capturado": true
   },
   {
     "ID": "265",
@@ -6431,7 +6432,8 @@
     "embarazada": "sinembarazo",
     "nutricion": "peso-normal",
     "eda": "no",
-    "caries": "nocaries"
+    "caries": "nocaries",
+    "capturado": true
   },
   {
     "ID": "302",
@@ -6498,7 +6500,8 @@
     "embarazada": "sinembarazo",
     "nutricion": "peso-normal",
     "eda": "no",
-    "caries": "nocaries"
+    "caries": "nocaries",
+    "capturado": true
   },
   {
     "ID": "303",
@@ -6565,7 +6568,8 @@
     "embarazada": "sinembarazo",
     "nutricion": "peso-normal",
     "eda": "no",
-    "caries": "nocaries"
+    "caries": "nocaries",
+    "capturado": true
   },
   {
     "ID": "304",
@@ -6632,7 +6636,8 @@
     "embarazada": "sinembarazo",
     "nutricion": "peso-normal",
     "eda": "no",
-    "caries": "nocaries"
+    "caries": "nocaries",
+    "capturado": true
   },
   {
     "ID": "305",
@@ -6699,7 +6704,8 @@
     "embarazada": "sinembarazo",
     "nutricion": "peso-normal",
     "eda": "no",
-    "caries": "nocaries"
+    "caries": "nocaries",
+    "capturado": true
   },
   {
     "ID": "306",
@@ -6766,7 +6772,8 @@
     "embarazada": "sinembarazo",
     "nutricion": "peso-normal",
     "eda": "no",
-    "caries": "nocaries"
+    "caries": "nocaries",
+    "capturado": true
   },
   {
     "ID": "307",
@@ -6833,7 +6840,8 @@
     "embarazada": "sinembarazo",
     "nutricion": "peso-normal",
     "eda": "no",
-    "caries": "nocaries"
+    "caries": "nocaries",
+    "capturado": true
   },
   {
     "ID": "308",
@@ -6900,7 +6908,8 @@
     "embarazada": "sinembarazo",
     "nutricion": "peso-normal",
     "eda": "no",
-    "caries": "nocaries"
+    "caries": "nocaries",
+    "capturado": true
   },
   {
     "ID": "309",
@@ -7034,7 +7043,8 @@
     "embarazada": "sinembarazo",
     "nutricion": "peso-normal",
     "eda": "no",
-    "caries": "nocaries"
+    "caries": "nocaries",
+    "capturado": true
   },
   {
     "ID": "311",
@@ -7168,7 +7178,8 @@
     "embarazada": "sinembarazo",
     "nutricion": "peso-normal",
     "eda": "no",
-    "caries": "nocaries"
+    "caries": "nocaries",
+    "capturado": true
   },
   {
     "ID": "313",
@@ -7235,7 +7246,8 @@
     "embarazada": "sinembarazo",
     "nutricion": "peso-normal",
     "eda": "no",
-    "caries": "nocaries"
+    "caries": "nocaries",
+    "capturado": true
   },
   {
     "ID": "314",
@@ -7302,6 +7314,7 @@
     "embarazada": "sinembarazo",
     "nutricion": "sobrepeso",
     "eda": "no",
-    "caries": "nocaries"
+    "caries": "nocaries",
+    "capturado": true
   }
 ]
