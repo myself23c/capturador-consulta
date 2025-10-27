@@ -6,11 +6,11 @@ const fs = require('fs');
 const path = require('path');
 
 // 2. Definimos la ruta de entrada (Excel) y salida (JSON)
-const nombreArchivoExcel = 'DUMPEOFINALAGOSTO.xlsx';
+const nombreArchivoExcel = 'octubre-1-15-pacientes.xlsx';
 // Si tu archivo se llama "pacientes-mayo.xls", cámbialo aquí:
 const rutaExcel = path.join(__dirname, nombreArchivoExcel);
 
-const nombreArchivoJson = 'pacientesParseados.json';
+const nombreArchivoJson = 'pacientesParseados1-15.json';
 const rutaJsonSalida = path.join(__dirname, nombreArchivoJson);
 
 try {
