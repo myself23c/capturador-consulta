@@ -1098,8 +1098,56 @@ function formatearFecha(fechaConsulta) {
 
 
 
+//---------------------------------- curp -------------------------------------------//
 
 
+/**
+ * Valida si una CURP tiene el formato correcto de forma asíncrona.
+ * @param {string} curp - El valor de paciente.curp
+ * @returns {Promise<string>} - Promesa con la CURP validada o el valor por defecto.
+ */
+async function validarCurpAsync(curp) {
+    const valorInvalido = "XXXX999999XXXXXX99";
+
+    // Simulamos un micro-retraso (opcional) si quisieras simular carga, 
+    // pero técnicamente no es necesario para que sea async.
+    // await new Promise(r => setTimeout(r, 10)); 
+
+    try {
+        // 1. Verificación básica
+        if (!curp || typeof curp !== 'string') {
+            return valorInvalido;
+        }
+
+        const curpUpper = curp.toUpperCase();
+        
+        // 2. Regex Oficial
+        const regexCurp = /^[A-Z]{4}\d{6}[HM][A-Z]{2}[B-DF-HJ-NP-TV-Z]{3}[A-Z0-9]\d$/;
+
+        // 3. Comprobación
+        if (curpUpper.length === 18 && regexCurp.test(curpUpper)) {
+            return curpUpper;
+        } else {
+            return valorInvalido;
+        }
+    } catch (error) {
+        // En caso de cualquier error inesperado, devolvemos el valor por defecto
+        console.error("Error validando CURP:", error);
+        return valorInvalido;
+    }
+}
+
+// --- EJEMPLO DE USO CON OTRA FUNCIÓN ASÍNCRONA ---
+
+// Imaginemos que esta función obtiene la CURP de una API o Base de Datos
+async function obtenerCurpDeBaseDeDatos() {
+    // Simula una espera de red
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve("PEPJ800101HDFRNN09"); // Devuelve una CURP
+        }, 1000);
+    });
+}
 
 
 
@@ -1120,6 +1168,7 @@ const { readFile, writeFile } = require('fs').promises;
 async function capturarConsulta(paciente) {
   const fecha_consulta = formatearFecha(paciente.fecha_consulta);
   const { pages, page } = await establecerConeccion();
+  const curpValidada = await validarCurpAsync(paciente.curp);
 
 
   console.log(`Iniciando captura de consulta para el paciente: ${paciente.nombres} ${paciente.apellido_paterno} ${paciente.apellido_materno}`);
@@ -1162,7 +1211,7 @@ if (yaExiste) {
   await new Promise(resolve => setTimeout(resolve, 5000));
 
 
-await poner_curp_registrar_paciente(page,paciente.curp);
+await poner_curp_registrar_paciente(page,curpValidada);
 await new Promise(resolve => setTimeout(resolve, 5000));
 await menu_datos_generales_paciente_intentar_asignar_otro_genero(page, paciente.sexo);
 await asignar_derecho_habiencia(page);
